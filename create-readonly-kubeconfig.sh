@@ -4,7 +4,7 @@
 kubectl create serviceaccount disto-readonly
 
 # Create cluster role
-kubectl create clusterrole disto-readonly --verb=get,list,watch --resource=*
+kubectl create clusterrole disto-readonly --verb=get,list,watch --resource="*"
 
 # Create cluster role binding
 kubectl create clusterrolebinding disto-readonly --clusterrole=disto-readonly --serviceaccount=default:disto-readonly
